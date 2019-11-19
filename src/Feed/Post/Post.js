@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 import TagList from "./TagList/TagList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 class Post extends Component {
     render() {
@@ -12,7 +12,7 @@ class Post extends Component {
             <div className="Post">
                 <div className="card" style={{width: '400px',height: '550px'}}>
                     <header className="header">
-                        <div><FontAwesomeIcon icon={faUserAlt} className="icon-user"/> </div>
+                        <div><FontAwesomeIcon icon={faUserCircle} className="icon-user"/> </div>
                     </header>
                     <img src={this.props.url} className="card-img-top" alt="..."/>
                         <div className="card-body">

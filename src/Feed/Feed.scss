@@ -1,0 +1,23 @@
+.Feed {
+  position: relative;
+  top: 70px;
+}
+.container {
+  max-width : 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.loading {
+  position: relative;
+  top: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Sriracha', cursive;
+  color: #ff6377;
+}

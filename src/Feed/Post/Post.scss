@@ -9,6 +9,7 @@ header {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  text-align: center;
 }
 
 .icon-user {
@@ -42,9 +43,19 @@ header {
 }
 
 .card-body {
-  margin: 0;
+  padding: 0px 15px 15px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+}
+
+.text-muted{
+  margin-top: 10px;
+}
+
+.likes {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 5px;
 }

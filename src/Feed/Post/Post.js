@@ -10,7 +10,7 @@ class Post extends Component {
     render() {
         return (
             <div className="Post">
-                <div className="card" style={{width: '500px',height: '650px'}}>
+                <div className="card" style={{width: '400px',height: '550px'}}>
                     <header className="header">
                         <div><FontAwesomeIcon icon={faUserAlt} className="icon-user"/> </div>
                     </header>

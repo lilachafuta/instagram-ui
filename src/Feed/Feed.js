@@ -36,7 +36,7 @@ class Feed extends Component {
                 <div className="container">
                     {this.state.posts.map(post=>{
                         return <Post url={post.image}
-                                     userId={post.userId}
+                                     id={post.id}
                                      title={post.title}
                                      likes={post.likes}
                                      tags={post.tags}

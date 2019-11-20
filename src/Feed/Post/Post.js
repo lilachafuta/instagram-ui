@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import './Post.scss';
 import Moment from 'react-moment';
 import TagList from "./TagList/TagList";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
-import { faUserCircle, faClock, faHeartbeat } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faUserCircle, faClock, faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 
 class Post extends Component {
     constructor(props) {
@@ -31,7 +31,6 @@ class Post extends Component {
                         {this.state.like ?
                             <span>{this.props.likes} <FontAwesomeIcon icon={faHeartbeat} className="icon"/></span> :
                             <span>{this.props.likes} <FontAwesomeIcon icon={faHeart} className="icon"/></span>}
-
                     </p>
                         <div className="card-body">
                             <p className="card-text-title">{this.props.title}</p>

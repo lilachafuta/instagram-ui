@@ -63,10 +63,37 @@ header {
   margin-top: 10px;
 }
 
-.likes {
+.actions-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.like, .comment, .share {
   overflow: hidden;
   text-align: right;
   padding-right: 10px;
   margin-top: 5px;
   background: white;
+}
+
+.icon:hover{
+  color:#e91e63 ;
+}
+
+.post-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number-likes {
+  padding-top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: 0 0 3px #ff4e6b;
 }

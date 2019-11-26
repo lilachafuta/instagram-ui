@@ -1,0 +1,48 @@
+.CreatePost {
+  position: relative;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+h1 {
+  font-family: 'Handlee', cursive;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.button {
+  background: #ffadb9;
+  border: white 1px solid;
+  color: black;
+  font-family: 'Handlee', cursive;
+}
+
+.button:hover {
+  background: #ff6377;
+  border: white 1px solid;
+}
+
+.alert-dark{
+  margin-top: 10px;
+  height: 25px;
+  padding: 0;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 1px black;
+}
+.custom-file-label {
+  color: white;
+  text-shadow: 1px 1px 2px #000000, 0 0 10px #ffb9c5, 0 0 3px #ff4e6b;}
+
+
+.badge-secondary {
+  background-color: #cfcfcf;
+}
+
+.form-control {
+  border: #ff6377 2px solid;
+}

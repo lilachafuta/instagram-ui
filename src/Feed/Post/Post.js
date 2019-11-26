@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 import TagList from "./TagList/TagList";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart, faPaperPlane, faCommentDots} from '@fortawesome/free-regular-svg-icons';
-import {faUserCircle, faClock, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
+import {faUserCircle, faClock, faHeart as heartFull} from '@fortawesome/free-solid-svg-icons';
 
 class Post extends Component {
     constructor(props) {
@@ -34,7 +34,7 @@ class Post extends Component {
                         <div className="actions-icons">
                             <div className="like" onClick={this.likePost.bind(this)}>
                                 {this.state.like ?
-                                    <FontAwesomeIcon icon={faHeartbeat} className="icon"/> :
+                                    <FontAwesomeIcon icon={heartFull} className="icon"/> :
                                     <FontAwesomeIcon icon={faHeart} className="icon"/>}
                             </div>
                             <div className="comment">

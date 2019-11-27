@@ -8,8 +8,14 @@ class Header extends Component {
         return (
             <div className="Header">
                 <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="/instagram-ui"><img src="https://www.goddess-c.com/assets/images/marketing/instagram/2475.new-instagram-text-logo.png" style={{height:'40px'}}/></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Brand href="/">
+                        <Link className="navbar-link" to="/instagram-ui">
+                            <img
+                                src="https://www.goddess-c.com/assets/images/marketing/instagram/2475.new-instagram-text-logo.png"
+                                style={{height: '40px'}}/>
+                        </Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Link className="navbar-link" to="/profile">Profile</Link>

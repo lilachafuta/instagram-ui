@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/instagram-ui/static/css/main.ffb0946a.chunk.css",
-    "main.js": "/instagram-ui/static/js/main.0a6e0a76.chunk.js",
-    "main.js.map": "/instagram-ui/static/js/main.0a6e0a76.chunk.js.map",
+    "main.css": "/instagram-ui/static/css/main.5e79e0fa.chunk.css",
+    "main.js": "/instagram-ui/static/js/main.605140a6.chunk.js",
+    "main.js.map": "/instagram-ui/static/js/main.605140a6.chunk.js.map",
     "runtime-main.js": "/instagram-ui/static/js/runtime-main.9b17314b.js",
     "runtime-main.js.map": "/instagram-ui/static/js/runtime-main.9b17314b.js.map",
-    "static/css/2.feb4fb90.chunk.css": "/instagram-ui/static/css/2.feb4fb90.chunk.css",
+    "static/css/2.33d160a9.chunk.css": "/instagram-ui/static/css/2.33d160a9.chunk.css",
     "static/js/2.0875f82d.chunk.js": "/instagram-ui/static/js/2.0875f82d.chunk.js",
     "static/js/2.0875f82d.chunk.js.map": "/instagram-ui/static/js/2.0875f82d.chunk.js.map",
     "index.html": "/instagram-ui/index.html",
-    "precache-manifest.6f23b0c6354cd22a1e7905820b76917c.js": "/instagram-ui/precache-manifest.6f23b0c6354cd22a1e7905820b76917c.js",
+    "precache-manifest.58e96c14969869efc92fc2ad9deec0ad.js": "/instagram-ui/precache-manifest.58e96c14969869efc92fc2ad9deec0ad.js",
     "service-worker.js": "/instagram-ui/service-worker.js",
-    "static/css/2.feb4fb90.chunk.css.map": "/instagram-ui/static/css/2.feb4fb90.chunk.css.map",
-    "static/css/main.ffb0946a.chunk.css.map": "/instagram-ui/static/css/main.ffb0946a.chunk.css.map"
+    "static/css/2.33d160a9.chunk.css.map": "/instagram-ui/static/css/2.33d160a9.chunk.css.map",
+    "static/css/main.5e79e0fa.chunk.css.map": "/instagram-ui/static/css/main.5e79e0fa.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.9b17314b.js",
-    "static/css/2.feb4fb90.chunk.css",
+    "static/css/2.33d160a9.chunk.css",
     "static/js/2.0875f82d.chunk.js",
-    "static/css/main.ffb0946a.chunk.css",
-    "static/js/main.0a6e0a76.chunk.js"
+    "static/css/main.5e79e0fa.chunk.css",
+    "static/js/main.605140a6.chunk.js"
   ]
 }

@@ -10,15 +10,18 @@ import 'react-tagsinput/react-tagsinput.css';
 class CreatePost extends Component {
     constructor(props) {
         super(props);
-        this.state={tags: []}
+        this.state={tags: [], toggle: false}
     }
     handleChange(tags) {
         this.setState({tags})
     }
+    showComment() {
+        this.setState({toggle: !this.state.toggle})
+    }
     render() {
         return (
             <div className="CreatePost">
-                <h1>Create Post</h1>
+                <h1>Create Post 📸</h1>
                 <Formik initialValues={{image: '', title: '', tags: ''}}
                         validationSchema={postModel}>
                     <FormYap className="col-xs-12 col-sm-6">
@@ -39,12 +42,16 @@ class CreatePost extends Component {
                         </Form.Group>
                         <Form.Group controlId="formUploadPost">
                             <Form.Label column="false">Tags</Form.Label>
-                            <Field name="tags">
+                            <div onClick={this.showComment.bind(this)}>
+                            <Field  name="tags" >
                                 {()=> (
                                     <TagsInput value={this.state.tags} onChange={this.handleChange.bind(this)} />
                                 )}
                             </Field>
-                            <div className="badge badge-secondary">Press 'Tab' or 'Enter' to add new tag</div>
+                            </div>
+                            {this.state.toggle ?
+                                <div className="badge badge-secondary">Press 'Tab' or 'Enter' to add new tag</div> :
+                            null}
                             <ErrorMessage class="alert alert-dark" name="tags" component="div"/>
                         </Form.Group>
                         <Button className="button" type="submit">

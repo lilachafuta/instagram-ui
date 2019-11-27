@@ -5,13 +5,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 100px;
 }
 
 h1 {
   font-family: 'Handlee', cursive;
   padding-bottom: 50px;
   text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #fff3f3, 0 0 10px #ffb9c5, 2px 0 3px #ff8594;
 }
 
 .button {
@@ -36,13 +38,10 @@ h1 {
 }
 .custom-file-label {
   color: white;
-  text-shadow: 1px 1px 2px #000000, 0 0 10px #ffb9c5, 0 0 3px #ff4e6b;}
+  text-shadow: 1px 1px 2px #000000, 0 0 10px #ffb9c5, 0 0 3px #ff4e6b;
+}
 
 
 .badge-secondary {
   background-color: #cfcfcf;
-}
-
-.form-control {
-  border: #ff6377 2px solid;
 }

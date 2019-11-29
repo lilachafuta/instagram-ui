@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './Header.scss';
 import {Link} from "react-router-dom";
 import {Navbar, Nav} from 'react-bootstrap';
+import {faUserEdit, faUserCircle} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+
 
 class Header extends Component {
     render() {
@@ -20,7 +24,12 @@ class Header extends Component {
                         <Nav className="mr-auto">
                             <Link className="navbar-link" to="/profile">Profile</Link>
                             <Link className="navbar-link" to="/post/create">New Post</Link>
+
                         </Nav>
+                        <div className="login-register">
+                            <Link className="navbar-link" to="/register"><FontAwesomeIcon icon={faUserEdit}/></Link>
+                            <Link className="navbar-link" to="/login"><FontAwesomeIcon icon={faUserCircle}/></Link>
+                        </div>
                     </Navbar.Collapse>
                 </Navbar>
             </div>

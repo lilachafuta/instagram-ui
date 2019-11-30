@@ -5,23 +5,26 @@ import {Button, Form} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import './Register.scss';
+import TagsInput from "react-tagsinput";
 
 class Register extends Component {
     constructor(props) {
         super(props);
-        this.state= {
+        this.state = {
             startDate: new Date()
         };
     }
+
     handleChange = date => {
         this.setState({
             startDate: date
         });
     };
+
     render() {
         return (
             <div className="Register">
-                <Formik initialValues={{name: '', username: '', password: '', birthdate: ''}}
+                <Formik initialValues={{name: '', username: '', password: '', birthDate: '', gender: '', about: ''}}
                         validationSchema={registerModel}>
                     <FormYap className="col-xs-8 col-sm-6">
                         <Form.Group controlId="formRegister">
@@ -36,18 +39,37 @@ class Register extends Component {
                         </Form.Group>
                         <Form.Group controlId="formRegister">
                             <Form.Label column="false">Password:</Form.Label>
-                            <Field name="password" className="form-control" />
+                            <Field name="password" className="form-control"/>
                             <ErrorMessage class="alert alert-dark" name="password" component="div"/>
                         </Form.Group>
+                        <div className="form-row">
+                            <div className="col-6">
+                                <Form.Group controlId="formRegister">
+                                    <Form.Label column="false">Birthdate:</Form.Label>
+                                    <Field name="birthDate" className="form-control" type="date"/>
+                                    <ErrorMessage class="alert alert-dark" name="birthDate" component="div"/>
+                                </Form.Group>
+                            </div>
+                            <div className="col-6">
+                                <Form.Group controlId="formRegister">
+                                    <Form.Label column="false">Gender:</Form.Label>
+                                    <Field name="gender" className="form-control">
+                                        {()=> (
+                                            <select className="form-control" id="exampleFormControlSelect1">
+                                                <option value={null}>Choose Gender</option>
+                                                <option value="f">Female</option>
+                                                <option value="m">Male</option>
+                                            </select>
+                                        )}
+                                    </Field>
+                                    <ErrorMessage class="alert alert-dark" name="gender" component="div"/>
+                                </Form.Group>
+                            </div>
+                        </div>
                         <Form.Group controlId="formRegister">
-                            <Form.Label column="false">Birthdate:</Form.Label>
-                            <DatePicker
-                                className="form-control"
-                                selected={this.state.startDate}
-                                onChange={this.handleChange}
-                                dateFormat="dd/MM/yyyy"
-                            />
-                            <ErrorMessage class="alert alert-dark" name="birthdate" component="div"/>
+                            <Form.Label column="false">About:</Form.Label>
+                            <Field name="about" className="form-control"/>
+                            <ErrorMessage class="alert alert-dark" name="about" component="div"/>
                         </Form.Group>
                         <Button className="button" type="submit">
                             Sign up!

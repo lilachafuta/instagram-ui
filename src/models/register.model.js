@@ -4,7 +4,7 @@ let register = yup.object().shape({
     username: yup.string().min(2).max(15).required(),
     password: yup.string().min(8).max(16).required(),
     birthDate: yup.date().required(),
-    gender:yup.string(),
-    about:yup.string()
+    gender: yup.string(),
+    about: yup.string()
 });
 export default  register;

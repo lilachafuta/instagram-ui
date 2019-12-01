@@ -2,33 +2,18 @@ import React, {Component} from 'react';
 import registerModel from '../models/register.model';
 import {Formik, Field, Form as FormYap, ErrorMessage} from 'formik';
 import {Button, Form} from "react-bootstrap";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import './Register.scss';
-import TagsInput from "react-tagsinput";
 
 class Register extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            startDate: new Date()
-        };
-    }
-
-    handleChange = date => {
-        this.setState({
-            startDate: date
-        });
-    };
-
     render() {
         return (
             <div className="Register">
-                <Formik initialValues={{name: '', username: '', password: '', birthDate: '', gender: '', about: ''}}
+                <h1>Sing up!</h1>
+                <Formik initialValues={{name: '', username: '', password: '', birthDate:new Date(), gender: '', about: ''}}
                         validationSchema={registerModel}>
                     <FormYap className="col-xs-8 col-sm-6">
                         <Form.Group controlId="formRegister">
-                            <Form.Label column="false">Name:</Form.Label>
+                            <Form.Label htmlFor="name" column="false">Name:</Form.Label>
                             <Field name="name" className="form-control"/>
                             <ErrorMessage class="alert alert-dark" name="name" component="div"/>
                         </Form.Group>
@@ -53,10 +38,9 @@ class Register extends Component {
                             <div className="col-6">
                                 <Form.Group controlId="formRegister">
                                     <Form.Label column="false">Gender:</Form.Label>
-                                    <Field name="gender" className="form-control">
-                                        {()=> (
+                                    <Field name="gender" className="form-control" placeholder="Select Gender">
+                                        {() => (
                                             <select className="form-control" id="exampleFormControlSelect1">
-                                                <option value={null}>Choose Gender</option>
                                                 <option value="f">Female</option>
                                                 <option value="m">Male</option>
                                             </select>

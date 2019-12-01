@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import CreatePost from "./CreatePost/CreatePost";
 import Register from "./Register/Register";
+import Login from "./Login/Login";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
                         </Route>
                         <Route path="/register">
                             <Register />
+                        </Route>
+                        <Route path="/login">
+                            <Login />
                         </Route>
                         <Route path="/">
                             <Feed />

@@ -7,7 +7,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import CreatePost from "./CreatePost/CreatePost";
 import Register from "./Register/Register";

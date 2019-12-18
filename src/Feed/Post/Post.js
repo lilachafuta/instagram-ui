@@ -5,6 +5,7 @@ import TagList from "./TagList/TagList";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart, faPaperPlane, faCommentDots} from '@fortawesome/free-regular-svg-icons';
 import {faUserCircle, faClock, faHeart as heartFull} from '@fortawesome/free-solid-svg-icons';
+import config from '../../config';
 
 class Post extends Component {
     constructor(props) {
@@ -26,10 +27,10 @@ class Post extends Component {
                 <div className="card">
                     <article>
                         <header className="header">
-                            <span>{this.props.id}</span>
+                            <span>{this.props.userId}</span>
                             <div><FontAwesomeIcon icon={faUserCircle} className="icon-user"/></div>
                         </header>
-                        <img src={this.props.url} className="card-img-top" onDoubleClick={this.likePost.bind(this)}
+                        <img src= {config.apiUrl + '/' + this.props.src} className="card-img-top" onDoubleClick={this.likePost.bind(this)}
                              alt="..."/>
                         <div className="post-actions">
                             <span className="number-likes">{this.props.likes} likes</span>
@@ -52,7 +53,7 @@ class Post extends Component {
                             <TagList tags={this.props.tags}/>
                             <small className="text-muted">
                                 Last updated <FontAwesomeIcon icon={faClock} className="icon-time"/>
-                                <Moment format=" HH:MM - MMM DD" unix>{this.props.time}</Moment>
+                                <Moment format=" HH:MM - MMM DD" unix>{this.props.created}</Moment>
                             </small>
                         </div>
                     </article>

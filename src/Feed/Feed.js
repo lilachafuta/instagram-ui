@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './Feed.scss'
 import  Post from './Post/Post';
 import BeatLoader from 'react-spinners/BeatLoader';
+import config from '../config';
+
 
 class Feed extends Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class Feed extends Component {
     }
     componentDidMount() {
         this.setState({loading: true});
-        fetch('https://my-json-server.typicode.com/evyros/fake-api/posts')
+        fetch(config.apiUrl + '/api/posts')
             .then(res=> res.json())
             .then(posts=>this.setState({posts, loading: false}))
     }
@@ -35,12 +37,13 @@ class Feed extends Component {
                 </div>
                 <div className="container">
                     {this.state.posts.map(post=>{
-                        return <Post url={post.image}
-                                     id={post.id}
+                        return <Post src={post.image}
+                                     userId={post.userId}
+                                     key={post._id}
                                      title={post.title}
                                      likes={post.likes}
                                      tags={post.tags}
-                                     time={Number(post.created)}/>
+                                     created={Number(post.created)}/>
                     })}
                 </div>
             </div>

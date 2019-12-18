@@ -14,9 +14,9 @@ class Header extends Component {
                 <Navbar bg="light" expand="lg">
                     <Navbar.Brand href="/">
                         <Link className="navbar-link" to="/instagram-ui">
-                            <img
+                            <img className="logo"
                                 src="https://www.goddess-c.com/assets/images/marketing/instagram/2475.new-instagram-text-logo.png"
-                                style={{height: '40px'}}/>
+                                alt=""/>
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
@@ -24,7 +24,6 @@ class Header extends Component {
                         <Nav className="mr-auto">
                             <Link className="navbar-link" to="/profile">Profile</Link>
                             <Link className="navbar-link" to="/post/create">New Post</Link>
-
                         </Nav>
                         <div className="login-register">
                             <Link className="navbar-link" to="/register"><FontAwesomeIcon icon={faUserEdit}/></Link>

@@ -45,7 +45,7 @@ class CreatePost extends Component {
     render() {
         return (
             <div className="CreatePost">
-                <h1>Create Post 📸</h1>
+                <h1>Create Post <span role="img" aria-label="#">📸</span></h1>
                 <Formik initialValues={{image: '', title: '', tags: []}}
                         validationSchema={postModel}
                         onSubmit={this.submit.bind(this)}
@@ -61,7 +61,7 @@ class CreatePost extends Component {
                                                setFieldValue('image', event.currentTarget.files[0]);
                                            }}/>
                                     <label className="custom-file-label" htmlFor="inputGroupFile01">
-                                        Choose your favorite image ✌🏻</label>
+                                        Choose your favorite image <span role="img" aria-label="#">✌🏻</span></label>
                                     <ErrorMessage class="alert alert-dark" name="image" component="div"/>
                                 </div>
                                 <Form.Group controlId="formUploadPost">
